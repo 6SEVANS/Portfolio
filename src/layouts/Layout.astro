@@ -1,5 +1,8 @@
-<!-- Layout controls elements common across all pages.
- Such as Navbar, headers and footers. -->
+---
+import Navigation from '../components/navbar.astro';
+---
+
+<!-- Controls the global layout of the portfolio. -->
 <!doctype html>
 <html lang="en">
 	<head>
@@ -7,16 +10,16 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>SEVANS Portfolio</title>
 	</head>
+
+	<!-- Contains the code for the header. -->
+	<header>
+		<Navigation/>
+	</header>
+	
+	<!-- Contains the code for global body contents. -->
 	<body>
-		<h1>Test</h1>
-		<slot />
+		<slot/>
 	</body>
 </html>
-
-<style>
-
-	/* CSS for the layout of the index page. */
-	/* Look into CSS page. */
-</style>

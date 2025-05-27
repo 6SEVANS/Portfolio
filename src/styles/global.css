@@ -1,0 +1,13 @@
+/* Controls the global styling of the portfolio.
+Things like background etc... */
+
+html{
+    /* background-color: white; */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar-links{
+    background-color: lightblue;
+}
+
+
