@@ -1,5 +1,6 @@
 ---
 import Navigation from '../components/navbar.astro';
+import '../styles/global.css';
 ---
 
 <!-- Controls the global layout of the portfolio. -->
@@ -13,13 +14,15 @@ import Navigation from '../components/navbar.astro';
 		<title>SEVANS Portfolio</title>
 	</head>
 
-	<!-- Contains the code for the header. -->
-	<header>
-		<Navigation/>
-	</header>
+	<div class = "container">
+		<!-- Contains the code for the header. -->
+		<header>
+			<Navigation/>
+		</header>
 	
-	<!-- Contains the code for global body contents. -->
-	<body>
-		<slot/>
-	</body>
+		<!-- Contains the code for global body contents. -->
+		<body>
+			<slot/>
+		</body>
+	</div>
 </html>

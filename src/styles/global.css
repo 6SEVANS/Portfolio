@@ -1,13 +1,35 @@
-/* Controls the global styling of the portfolio.
-Things like background etc... */
-
+/* Controls the global styling of the portfolio. */
 html{
-    /* background-color: white; */
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.navbar-links{
-    background-color: lightblue;
+/* #region Navbar-css */
+    .navbar{
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .navbar ul{
+        list-style-type:none;
+        display:flex;
+        margin:15px;
+        padding:0;
+    }
+
+    .navbar-link a{
+        text-decoration: none;
+        margin: 15px;
+        margin-top: 0px;
+        color: black;
+    }
+    
+    .navbar a:hover{
+        color:red;
+        cursor: pointer;
+    }
+/* #endregion */
+
+.container{
+    width:95%;
+    margin: auto;
 }
-
-
