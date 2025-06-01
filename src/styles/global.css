@@ -18,18 +18,40 @@ html{
 
     .navbar-link a{
         text-decoration: none;
-        margin: 15px;
+        margin: 10px;
         margin-top: 0px;
         color: black;
     }
+
+    #logo{
+        min-width: 54.4px;
+        min-height: auto;
+    }
     
-    .navbar a:hover{
+    .navbar a:hover, #navbar-resume-download a:hover{
         color:red;
         cursor: pointer;
+    }
+
+    #navbar-resume-download{
+        display:flex;
+    }
+
+    #navbar-resume-download a{
+        text-decoration: none;
+        margin:10px;
+        margin-right: 3px;
+        margin-top: 0px;
+        color: black;
+    }
+
+    #download-icon{
+        max-height: 1.2em;
+        width: auto;
     }
 /* #endregion */
 
 .container{
-    width:95%;
+    width:90%;
     margin: auto;
 }
