@@ -1,0 +1,24 @@
+---
+import '../styles/global.css'
+import {Image} from 'astro:assets';
+import githubIcon from '../../public/github-mark-white.svg';
+import inIcon from '../../public/InBug-Black.png';
+---
+
+<!-- Controls the footer of the website. -->
+<footer>
+    <div class = "footer">
+        <ul>
+            <li> 
+                <a href = "/">
+                    <Image id = "github-icon" src = {githubIcon} alt = "Github logo"/>
+                </a>
+            </li>
+            <li>
+                <a href = "/">
+                    <Image id = "in-icon" src = {inIcon} alt = "LinkedIn Logo"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>

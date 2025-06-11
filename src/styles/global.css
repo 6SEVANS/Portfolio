@@ -3,10 +3,20 @@ html{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.wrapper{
+    width:95%;
+    margin: auto;
+    background-color: aqua;
+}
+
 /* #region Navbar-css */
+    /* Roughly 450px width is when overflow happens, switch to burger menu? */
     .navbar{
         display:flex;
         justify-content: space-between;
+        font-family: "Poppins", sans-serif;
+        background-color: blueviolet;
+        overflow: auto;
     }
 
     .navbar ul{
@@ -47,11 +57,25 @@ html{
 
     #download-icon{
         max-height: 1.2em;
+        margin-top: 2px;
         width: auto;
     }
 /* #endregion */
 
-.container{
-    width:90%;
-    margin: auto;
-}
+/* #region Footer-css */
+    .footer ul{
+        list-style-type: none;
+        overflow: hidden; }
+    .footer li{
+        float:right;
+        margin:10px;
+        margin-left:5px; }
+    #github-icon{
+        max-height: 2em;
+        width: auto;
+        display: block; }
+    #in-icon{
+        max-height: 2em;
+        width: auto;
+        display: block; }
+/* #endregion */
