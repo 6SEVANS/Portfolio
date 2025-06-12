@@ -1,66 +1,63 @@
 /* Controls the global styling of the portfolio. */
 html{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
+    font-family:Verdana, Geneva, Tahoma, sans-serif; }
 
 .wrapper{
     width:95%;
     margin: auto;
-    background-color: aqua;
-}
+    background-color: darkgrey; }
 
 /* #region Navbar-css */
-    /* Roughly 450px width is when overflow happens, switch to burger menu? */
-    .navbar{
+    .navbar ul{
+        list-style-type: none;
         display:flex;
         justify-content: space-between;
-        font-family: "Poppins", sans-serif;
-        background-color: blueviolet;
-        overflow: auto;
-    }
-
-    .navbar ul{
-        list-style-type:none;
-        display:flex;
-        margin:15px;
+        overflow: hidden;
         padding:0;
-    }
-
-    .navbar-link a{
+        align-items: center; }
+    .navbar li{
+        float:right;
+        margin:10px; }
+    .navbar li a{
         text-decoration: none;
-        margin: 10px;
-        margin-top: 0px;
-        color: black;
-    }
-
-    #logo{
-        min-width: 54.4px;
-        min-height: auto;
-    }
-    
-    .navbar a:hover, #navbar-resume-download a:hover{
-        color:red;
-        cursor: pointer;
-    }
-
-    #navbar-resume-download{
-        display:flex;
-    }
-
-    #navbar-resume-download a{
-        text-decoration: none;
-        margin:10px;
-        margin-right: 3px;
-        margin-top: 0px;
-        color: black;
-    }
-
+        color:black;
+        display: flex;}
     #download-icon{
         max-height: 1.2em;
-        margin-top: 2px;
         width: auto;
-    }
+        margin-left:5px; }
+    #logo-item{
+        float:left;
+        margin-right:auto; }
+    #logo-item a{
+        border-radius: 100%; }
+    #logo{
+        max-width: 54.4px;
+        height: auto; 
+        border-radius: 100%; }
+    .navbar a:hover{
+        color:red; }
+    #burger-menu{
+        display:none; }
 /* #endregion */
+
+/* #region Navbar-mobile-css */
+
+    @media screen and (max-width:439px){
+        .navbar li {
+            display: none;
+        }
+        #logo-item{
+            display: flex;
+        }
+        #burger-menu{
+            display: flex;
+        }
+    }
+
+/* Roughly 440px width is when overflow happens, switch to burger menu? */
+/* #endregion */
+
 
 /* #region Footer-css */
     .footer ul{
@@ -71,11 +68,11 @@ html{
         margin:10px;
         margin-left:5px; }
     #github-icon{
-        max-height: 2em;
+        max-height: 1.7em;
         width: auto;
         display: block; }
     #in-icon{
-        max-height: 2em;
+        max-height: 1.7em;
         width: auto;
         display: block; }
 /* #endregion */
