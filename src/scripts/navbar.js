@@ -1,7 +1,7 @@
-// Controls the javascript for the navbar.
-
-//Testing getting a response when the burger menu is clicked.
+//Controls the javascript for the navbar.
+//Detects when the burger menu is clicked.
 const burgerMenu = document.querySelector('#burger-menu');
+const navbar = document.getElementById("navbar-links");
 burgerMenu.addEventListener('click', () => {
-    console.log("Test");
-})
+    navbar.classList.toggle('active');
+});

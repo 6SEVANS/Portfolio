@@ -5,10 +5,10 @@ import downloadIcon from '../../public/download_icon.svg';
 import logo from '../../public/Logo.svg';
 ---
 <!-- Controls the Navbar of the portfolio. -->
- <script src = "../scripts/navbar.js"></script>
+<script src = "../scripts/navbar.js"></script>
 <nav>
-    <div class = "navbar">
-        <ul>
+    <div class = "navbar" id = "navbar">
+        <ul id = "navbar-links">
             <li id = "logo-item">
                 <a href = "/">
                     <Image id = "logo" src = {logo} alt = "SE Logo"></Image>
@@ -22,10 +22,12 @@ import logo from '../../public/Logo.svg';
                     Resume <Image id = "download-icon" src = {downloadIcon} alt = "Download Icon"></Image>
                 </a>
             </li>
-            <li id = "burger-menu">
-                |||
-            </li>
         </ul>
+        <div id = "burger-menu">
+            <div class = "burger-bar"/>
+            <div class = "burger-bar"/>
+            <div class = "burger-bar"/>
+        </div>
     </div>
 </nav>
 

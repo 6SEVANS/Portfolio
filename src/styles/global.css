@@ -1,78 +1,84 @@
 /* Controls the global styling of the portfolio. */
 html{
-    font-family:Verdana, Geneva, Tahoma, sans-serif; }
-
+    font-family:Verdana, Geneva, Tahoma, sans-serif;}
 .wrapper{
     width:95%;
-    margin: auto;
-    background-color: darkgrey; }
+    margin:auto;
+    background-color:darkgrey;}
 
 /* #region Navbar-css */
     .navbar ul{
-        list-style-type: none;
+        list-style-type:none;
         display:flex;
-        justify-content: space-between;
-        overflow: hidden;
+        justify-content:space-between;
+        overflow:hidden;
         padding:0;
-        align-items: center; }
+        align-items:center;}
     .navbar li{
         float:right;
-        margin:10px; }
+        margin:10px;}
     .navbar li a{
-        text-decoration: none;
+        text-decoration:none;
         color:black;
         display: flex;}
     #download-icon{
-        max-height: 1.2em;
-        width: auto;
-        margin-left:5px; }
+        max-height:1.2em;
+        width:auto;
+        margin-left:5px;}
     #logo-item{
         float:left;
-        margin-right:auto; }
+        margin-right:auto;}
     #logo-item a{
-        border-radius: 100%; }
+        border-radius:100%;}
     #logo{
-        max-width: 54.4px;
-        height: auto; 
-        border-radius: 100%; }
+        max-width:54.4px;
+        height:auto; 
+        border-radius:100%;}
     .navbar a:hover{
-        color:red; }
+        color:red;}
     #burger-menu{
-        display:none; }
+        display:none;}
 /* #endregion */
-
 /* #region Navbar-mobile-css */
-
     @media screen and (max-width:439px){
         .navbar li {
-            display: none;
-        }
+            display:none;}
         #logo-item{
-            display: flex;
-        }
+            display:flex;}
         #burger-menu{
-            display: flex;
-        }
+            display:flex;
+            flex-direction:column;
+            justify-content:space-around;
+            height:30px;
+            position:absolute;
+            right:2em;
+            top:2.3em;}
+        .burger-bar{
+            height:5px;
+            width:25px;
+            background-color:black;
+            border-radius:5px;}
+        #navbar-links.active{
+            flex-direction:column;}
+        #navbar-links.active li{
+            display:block;}
     }
-
-/* Roughly 440px width is when overflow happens, switch to burger menu? */
 /* #endregion */
-
 
 /* #region Footer-css */
     .footer ul{
-        list-style-type: none;
-        overflow: hidden; }
+        list-style-type:none;
+        overflow:hidden;}
     .footer li{
         float:right;
         margin:10px;
-        margin-left:5px; }
+        margin-left:5px;}
     #github-icon{
-        max-height: 1.7em;
-        width: auto;
-        display: block; }
+        max-height:1.7em;
+        width:auto;
+        display:block;}
     #in-icon{
-        max-height: 1.7em;
-        width: auto;
-        display: block; }
+        max-height:1.7em;
+        width:auto;
+        display:block;}
 /* #endregion */
