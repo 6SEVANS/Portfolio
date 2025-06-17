@@ -4,4 +4,5 @@ const burgerMenu = document.querySelector('#burger-menu');
 const navbar = document.getElementById("navbar-links");
 burgerMenu.addEventListener('click', () => {
     navbar.classList.toggle('active');
+    burgerMenu.classList.toggle('active');
 });
