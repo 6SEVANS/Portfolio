@@ -1,3 +1,10 @@
+---
+import Navigation from '../components/navbar.astro';
+import Footer from '../components/footer.astro';
+import '../styles/global.css';
+---
+
+<!-- Controls the global layout of the portfolio. -->
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,18 +12,21 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>SEVANS Portfolio</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+		</style>
 	</head>
-	<body>
-		<slot />
-	</body>
-</html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+	<div class = "wrapper">
+		<header>
+			<Navigation/>
+		</header>
+		<body>
+			<slot/>
+		</body>
+		<footer>
+			<Footer/>
+		</footer>
+	</div>
+</html>

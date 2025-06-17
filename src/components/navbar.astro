@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+import {Image} from 'astro:assets';
+import downloadIcon from '../../public/download_icon.svg';
+import logo from '../../public/Logo.svg';
+---
+<!-- Controls the Navbar of the portfolio. -->
+<script src = "../scripts/navbar.js"></script>
+<nav>
+    <div class = "navbar" id = "navbar">
+        <ul id = "navbar-links">
+            <li id = "logo-item">
+                <a href = "/">
+                    <Image id = "logo" src = {logo} alt = "SE Logo"></Image>
+                </a>
+            </li>
+            <li> <a href = "/"> Projects </a></li>
+            <li> <a href = "https://www.w3schools.com/"> Contact </a></li>
+            <li> <a href = "https://www.w3schools.com/"> About </a></li>
+            <li> 
+                <a href = "https://www.w3schools.com/">
+                    Resume <Image id = "download-icon" src = {downloadIcon} alt = "Download Icon"></Image>
+                </a>
+            </li>
+        </ul>
+        <div id = "burger-menu">
+            <div class = "burger-bar"></div>
+            <div class = "burger-bar"></div>
+            <div class = "burger-bar"></div>
+        </div>
+    </div>
+</nav>
+

@@ -1,0 +1,125 @@
+/* Controls the global styling of the portfolio. */
+html{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.wrapper{
+    width:95%;
+    margin:auto;
+    background-color:darkgrey;
+}
+
+/* #region Navbar-css */
+    .navbar ul{
+        list-style-type:none;
+        display:flex;
+        justify-content:space-between;
+        overflow:hidden;
+        padding:0;
+        align-items:center;
+    }
+    .navbar li{
+        float:right;
+        margin:10px;
+    }
+    .navbar li a{
+        text-decoration:none;
+        color:black;
+        display: flex;
+    }
+    #download-icon{
+        max-height:1.2em;
+        width:auto;
+        margin-left:5px;
+    }
+    #logo-item{
+        float:left;
+        margin-right:auto;
+    }
+    #logo-item a{
+        border-radius:100%;
+    }
+    #logo{
+        max-width:54.4px;
+        height:auto; 
+        border-radius:100%;
+    }
+    .navbar a:hover{
+        color:red;
+    }
+    #burger-menu{
+        display:none;
+    }
+/* #endregion */
+/* #region Navbar-mobile-css */
+    @media screen and (max-width:439px){
+        .navbar li {
+            display:none;
+        }
+        #logo-item{
+            display:flex;
+        }
+        #burger-menu{
+            display:flex;
+            flex-direction:column;
+            position:absolute;
+            right:3.8em;
+            top: 2.5em;
+        }
+        .burger-bar{
+            height:4px;
+            width:25px;
+            background-color:black;
+            border-radius:20px;
+            transition: all 0.4s ease-in-out;
+            position:absolute;
+            transform-origin:center;
+        }
+        #navbar-links.active{
+            flex-direction:column;
+        }
+        #navbar-links.active li{
+            display:block;
+        }
+        
+        /* Controls the animation for toggling the mobile navbar.  */
+        .burger-bar:nth-child(1){
+            transform: translateY(0px);
+        }
+        .burger-bar:nth-child(2){
+            transform: translateY(9px);
+        }
+        .burger-bar:nth-child(3){
+            transform: translateY(18px);
+        }
+        #burger-menu.active .burger-bar:nth-child(1){
+            transform: translateY(9px) rotate(45deg);
+        }
+        #burger-menu.active .burger-bar:nth-child(2){
+            opacity: 0;
+        }
+        #burger-menu.active .burger-bar:nth-child(3){
+            transform: translateY(9px) rotate(-45deg);
+        }
+    }
+/* #endregion */
+/* #region Footer-css */
+    .footer ul{
+        list-style-type:none;
+        overflow:hidden;
+    }
+    .footer li{
+        float:right;
+        margin:10px;
+        margin-left:5px;
+    }
+    #github-icon{
+        max-height:1.7em;
+        width:auto;
+        display:block;
+    }
+    #in-icon{
+        max-height:1.7em;
+        width:auto;
+        display:block;
+    }
+/* #endregion */
