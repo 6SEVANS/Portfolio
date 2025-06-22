@@ -18,12 +18,15 @@ import '../styles/global.css';
 		</style>
 	</head>
 
+	<script src = "../scripts/navbar.js"></script>
 	<div class = "wrapper">
 		<header>
 			<Navigation/>
 		</header>
 		<body>
-			<slot/>
+			<div id = "body-wrapper">
+				<slot/>
+			</div>
 		</body>
 		<footer>
 			<Footer/>

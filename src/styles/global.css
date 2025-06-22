@@ -1,13 +1,17 @@
 /* Controls the global styling of the portfolio. */
 html{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    height: 100vh;
+    /* overflow: hidden; */
+    margin:0;
+    background-color: darkgrey;
 }
 .wrapper{
     width:95%;
+    height:100vh;
     margin:auto;
     background-color:darkgrey;
 }
-
 /* #region Navbar-css */
     .navbar ul{
         list-style-type:none;
@@ -15,6 +19,7 @@ html{
         justify-content:space-between;
         overflow:hidden;
         padding:0;
+        margin-top: 0;
         align-items:center;
     }
     .navbar li{
@@ -45,6 +50,10 @@ html{
     }
     .navbar a:hover{
         color:red;
+        cursor: pointer;
+    }
+    #logo-item a:hover{
+        cursor: pointer;
     }
     #burger-menu{
         display:none;
@@ -63,14 +72,14 @@ html{
             flex-direction:column;
             position:absolute;
             right:3.8em;
-            top: 2.5em;
+            top: 2.06em;
         }
         .burger-bar{
             height:4px;
             width:25px;
             background-color:black;
             border-radius:20px;
-            transition: all 0.4s ease-in-out;
+            transition: all 0.3s ease-in-out;
             position:absolute;
             transform-origin:center;
         }
@@ -79,6 +88,9 @@ html{
         }
         #navbar-links.active li{
             display:block;
+        }
+        #body-wrapper.active{
+            display:none;
         }
         
         /* Controls the animation for toggling the mobile navbar.  */
@@ -102,10 +114,15 @@ html{
         }
     }
 /* #endregion */
-/* #region Footer-css */
+/* #region Footer-css */  
     .footer ul{
         list-style-type:none;
         overflow:hidden;
+        position:absolute;
+        right:1.3em;
+        bottom:1em;
+        margin:0;
+        padding:0;
     }
     .footer li{
         float:right;
@@ -121,5 +138,22 @@ html{
         max-height:1.7em;
         width:auto;
         display:block;
+    }
+/* #endregion */
+/* #region Index-css */
+    #index-wrapper{
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 10%;
+    }
+    .index-button{
+        background-color: black;
+        text-decoration: none;
+        text-align: center;
+        padding: 20px;
+        width: 6em;
+        display: inline-block;
+        color: white;
     }
 /* #endregion */
