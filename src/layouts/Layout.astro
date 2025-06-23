@@ -19,17 +19,17 @@ import '../styles/global.css';
 	</head>
 
 	<script src = "../scripts/navbar.js"></script>
-	<div class = "wrapper">
-		<header>
-			<Navigation/>
-		</header>
-		<body>
+	<body>
+		<div class = "wrapper">
+			<header>
+				<Navigation/>
+			</header>
 			<div id = "body-wrapper">
 				<slot/>
 			</div>
-		</body>
-		<footer>
-			<Footer/>
-		</footer>
-	</div>
+			<footer>
+				<Footer/>
+			</footer>
+		</div>
+	</body>
 </html>

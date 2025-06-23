@@ -1,14 +1,14 @@
 /* Controls the global styling of the portfolio. */
-html{
+html,body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    height: 100vh;
-    /* overflow: hidden; */
     margin:0;
     background-color: darkgrey;
 }
 .wrapper{
+    display: flex;
+    flex-direction: column;
     width:95%;
-    height:100vh;
+    height: auto;
     margin:auto;
     background-color:darkgrey;
 }
@@ -115,12 +115,14 @@ html{
     }
 /* #endregion */
 /* #region Footer-css */  
+    .footer{
+        position:fixed;
+        bottom:0em;
+        right:0.7em;
+    }
     .footer ul{
         list-style-type:none;
         overflow:hidden;
-        position:absolute;
-        right:1.3em;
-        bottom:1em;
         margin:0;
         padding:0;
     }
@@ -155,5 +157,26 @@ html{
         width: 6em;
         display: inline-block;
         color: white;
+    }
+/* #endregion */
+/* #region Project-Card-css */
+    #projects-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:1em;
+    }
+    .card{
+        border: 5px solid black;
+        border-radius: 5px;
+        width:20em;
+        display: flex;
+        flex-direction: column;
+    }
+    .image-container{
+        border-bottom: 5px solid black;
+    }
+    .info-container{
+        justify-items: center;
     }
 /* #endregion */
