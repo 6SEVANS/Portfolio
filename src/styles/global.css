@@ -72,7 +72,7 @@ html,body{
             flex-direction:column;
             position:absolute;
             right:3.8em;
-            top: 2.06em;
+            top: 1.55em;
         }
         .burger-bar{
             height:4px;
@@ -167,16 +167,46 @@ html,body{
         gap:1em;
     }
     .card{
-        border: 5px solid black;
-        border-radius: 5px;
-        width:20em;
-        display: flex;
+        display:flex;
         flex-direction: column;
+        justify-content: space-between;
+        width:18em;
+        height:26em;
+        overflow: hidden;
+        padding:1em;
+        background-color: white;
+        border-radius: 1em;
     }
-    .image-container{
-        border-bottom: 5px solid black;
+    .project-image{
+        object-fit: cover;
+        height:33%;
+        border-radius: 1em;
+    }
+    .project-title{
+        margin:0;
     }
     .info-container{
-        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .project-buttons{
+        margin-top: auto;
+        display: flex;
+        gap:0.5em;
+    }
+    .project-buttons a{
+        text-decoration: none;
+        color:white;
+        padding:1em;
+        border-radius: 0.8em;
+        text-align: center;
+        width:100%;
+    }
+    .demo-button{
+        background-color: blue;
+    }
+    .repo-button{
+        background-color: green;
     }
 /* #endregion */

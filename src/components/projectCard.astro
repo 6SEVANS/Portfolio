@@ -5,16 +5,16 @@ const { imageLink, title, tags, description, demoLink, repoLink  } = Astro.props
 ---
 
 <div class = "card">
-    <div class = "image-container">
-        <img class = "project-image" src = { imageLink } alt = "Image showing project">
-    </div>
+    <img class = "project-image" src = { imageLink } alt = "Image showing project">
     <div class = "info-container">
-        <h1 class = "project-title"> {title} </h1>
-        <h2 class = "project-tags"> {tags} </h2>
+        <p class = "project-tags"> {tags} </p>
+        <h2 class = "project-title"> {title} </h2>
         <p class = "project-description"> {description} </p>
 
-        <a class = "demo-button" href = {demoLink} > Live Demo </a>
-        <a class = "repo-button" href = {repoLink} > Github </a>
+        <div class = "project-buttons">
+            <a class = "demo-button" href = {demoLink} > Live Demo </a>
+            <a class = "repo-button" href = {repoLink} > Github </a>
+        </div>
     </div>
 </div>
 
