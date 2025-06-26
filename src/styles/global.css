@@ -3,6 +3,7 @@ html,body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin:0;
     background-color: darkgrey;
+    scrollbar-gutter:stable;
 }
 .wrapper{
     display: flex;
@@ -59,7 +60,157 @@ html,body{
         display:none;
     }
 /* #endregion */
-/* #region Navbar-mobile-css */
+/* #region Footer-css */  
+    .footer{
+        position:fixed;
+        bottom:0em;
+        right:0.7em;
+    }
+    .footer ul{
+        list-style-type:none;
+        overflow:hidden;
+        margin:0;
+        padding:0;
+    }
+    .footer li{
+        float:right;
+        margin:10px;
+        margin-left:5px;
+    }
+    #github-icon{
+        max-height:1.7em;
+        width:auto;
+        display:block;
+    }
+    #in-icon{
+        max-height:1.7em;
+        width:auto;
+        display:block;
+    }
+/* #endregion */
+/* #region Index-page-css */
+    #index-wrapper{
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 10%;
+    }
+    .index-button{
+        background-color: black;
+        text-decoration: none;
+        text-align: center;
+        padding: 20px;
+        width: 6em;
+        display: inline-block;
+        color: white;
+    }
+/* #endregion */
+/* #region Project-page-css */
+    #projects-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:1em;
+    }
+    .card{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width:18em;
+        height:26em;
+        overflow: hidden;
+        padding:1em;
+        background-color: white;
+        border-radius: 1em;
+    }
+    .project-image{
+        object-fit: cover;
+        height:33%;
+        border-radius: 1em;
+    }
+    .project-title{
+        margin:0;
+    }
+    .info-container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .project-buttons{
+        margin-top: auto;
+        display: flex;
+        gap:0.5em;
+    }
+    .project-buttons a{
+        text-decoration: none;
+        color:white;
+        padding:1em;
+        border-radius: 0.8em;
+        text-align: center;
+        width:100%;
+    }
+    .demo-button{
+        background-color: blue;
+    }
+    .repo-button{
+        background-color: green;
+    }
+    .demo-button:hover, .repo-button:hover{
+        cursor: pointer;
+    }
+
+/* #endregion */
+/* #region About-page-css  */
+    #email-header{
+        text-align: center;
+    }
+    #email-form{
+        display:grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 5fr 1fr;
+        grid-template-areas: 
+            'name email'
+            'message message'
+            'submit submit';
+        gap:0.3em;
+        width: 70%;
+        margin: auto;
+        padding:0;
+    }
+    #email-form input, #email-form textarea{
+        width:100%;
+        padding:10px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        resize: none;
+        border-radius: 0.5em;
+        border: 1px solid silver;
+    }
+    #email-form #name{
+        grid-area: name;
+    }
+    #email-form #email{
+        grid-area: email;
+    }
+    #email-form #message{
+        grid-area: message;
+        font-size: 1rem;
+        width: 100%;
+    }
+    #email-form #submit{
+        grid-area:submit;
+        width:auto;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        font-size: 1rem;
+        border-radius: 0.5em;
+        border:1px solid silver;
+    }
+    #email-form #submit:hover{
+        cursor: pointer;
+    }
+/* #endregion */
+/* #region Mobile-css */
     @media screen and (max-width:439px){
         .navbar li {
             display:none;
@@ -112,101 +263,19 @@ html,body{
         #burger-menu.active .burger-bar:nth-child(3){
             transform: translateY(9px) rotate(-45deg);
         }
-    }
-/* #endregion */
-/* #region Footer-css */  
-    .footer{
-        position:fixed;
-        bottom:0em;
-        right:0.7em;
-    }
-    .footer ul{
-        list-style-type:none;
-        overflow:hidden;
-        margin:0;
-        padding:0;
-    }
-    .footer li{
-        float:right;
-        margin:10px;
-        margin-left:5px;
-    }
-    #github-icon{
-        max-height:1.7em;
-        width:auto;
-        display:block;
-    }
-    #in-icon{
-        max-height:1.7em;
-        width:auto;
-        display:block;
-    }
-/* #endregion */
-/* #region Index-css */
-    #index-wrapper{
-        width: 100%;
-        display: block;
-        text-align: center;
-        margin-top: 10%;
-    }
-    .index-button{
-        background-color: black;
-        text-decoration: none;
-        text-align: center;
-        padding: 20px;
-        width: 6em;
-        display: inline-block;
-        color: white;
-    }
-/* #endregion */
-/* #region Project-Card-css */
-    #projects-wrapper{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap:1em;
-    }
-    .card{
-        display:flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width:18em;
-        height:26em;
-        overflow: hidden;
-        padding:1em;
-        background-color: white;
-        border-radius: 1em;
-    }
-    .project-image{
-        object-fit: cover;
-        height:33%;
-        border-radius: 1em;
-    }
-    .project-title{
-        margin:0;
-    }
-    .info-container{
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-    .project-buttons{
-        margin-top: auto;
-        display: flex;
-        gap:0.5em;
-    }
-    .project-buttons a{
-        text-decoration: none;
-        color:white;
-        padding:1em;
-        border-radius: 0.8em;
-        text-align: center;
-        width:100%;
-    }
-    .demo-button{
-        background-color: blue;
-    }
-    .repo-button{
-        background-color: green;
+
+        #email-form{
+            width:80%;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+            'name'
+            'email'
+            'message'
+            'submit';
+        }
+        #email-form input, #email-form textarea{
+            resize: vertical;
+        }
     }
 /* #endregion */

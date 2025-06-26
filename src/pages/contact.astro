@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout>
+    <h1 id = "email-header"> Get in touch! </h1>
+    <form id = "email-form">
+        <input type = "text" id = "name" name = "name" placeholder = "Full Name..." required>
+        <input type = "email" id = "email" name = "email" placeholder ="Email Address...    " required>
+        <textarea id = "message" name = "message" placeholder = "Your Message..." required></textarea>
+        <button id = "submit" type = "submit">Send</button>
+    </form>
+</Layout>
+
+<!-- How to create a contact email form. -->
+<!-- https://mailtrap.io/blog/html-form-send-email/ -->
