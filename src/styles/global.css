@@ -160,7 +160,7 @@ html,body{
     }
 
 /* #endregion */
-/* #region About-page-css  */
+/* #region Contact-page-css  */
     #email-header{
         text-align: center;
     }
@@ -199,7 +199,7 @@ html,body{
     }
     #email-form #submit{
         grid-area:submit;
-        width:auto;
+        width:35%;
         margin-left: 50%;
         transform: translateX(-50%);
         font-size: 1rem;
