@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+import ProjectCard from '../components/projectCard.astro';
+import placeholder from '../../public/placeholder.svg';
+---
+
+<!-- Controls the layout of the Index/home page. -->
+<Layout>
+    <div id = "projects-wrapper">
+        <ProjectCard
+            imageLink = {placeholder.src}
+            title = "Lorem Ipsum"
+            tags = "HTML CSS JS"
+            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            demoLink = "/"
+            repoLink = {null}
+        />
+        <ProjectCard
+            imageLink = {placeholder.src}
+            title = "Test title"
+            tags = "Test tag"
+            description = "Test description"
+            demoLink = {null}
+            repoLink = {null}
+        />
+        <ProjectCard
+            imageLink = {placeholder.src}
+            title = "Test title"
+            tags = "HTML CSS JS"
+            description = "Test description"
+            demoLink = {null}
+            repoLink = {null}
+        />
+        <ProjectCard
+            imageLink = {placeholder.src}
+            title = "Test title"
+            tags = "Test tag"
+            description = "Test description"
+            demoLink = {null}
+            repoLink = {null}
+        />
+    </div>
+</Layout>

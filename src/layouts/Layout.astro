@@ -10,7 +10,7 @@ import '../styles/global.css';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/Logo.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>SEVANS Portfolio</title>
 		<style>
@@ -18,15 +18,18 @@ import '../styles/global.css';
 		</style>
 	</head>
 
-	<div class = "wrapper">
-		<header>
-			<Navigation/>
-		</header>
-		<body>
-			<slot/>
-		</body>
-		<footer>
-			<Footer/>
-		</footer>
-	</div>
+	<script src = "../scripts/navbar.js"></script>
+	<body>
+		<div class = "wrapper">
+			<header>
+				<Navigation/>
+			</header>
+			<div id = "body-wrapper">
+				<slot/>
+			</div>
+			<footer>
+				<Footer/>
+			</footer>
+		</div>
+	</body>
 </html>
