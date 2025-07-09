@@ -2,7 +2,6 @@
 import '../styles/global.css';
 import {Image} from 'astro:assets';
 import downloadIcon from '../../public/download_icon.svg';
-import logo from '../../public/Logo.svg';
 ---
 <!-- Controls the Navbar of the portfolio. -->
 <script src = "../scripts/navbar.js"></script>
@@ -11,14 +10,14 @@ import logo from '../../public/Logo.svg';
         <ul id = "navbar-links">
             <li id = "logo-item">
                 <a href = "/">
-                    <Image id = "logo" src = {logo} alt = "SE Logo"></Image>
+                    <img id = "logo" src = "../../Logo.svg">
                 </a>
             </li>
             <li> <a href = "/projects"> Projects </a></li>
             <li> <a href = "/contact"> Contact </a></li>
             <li> 
                 <a href = "https://www.w3schools.com/">
-                    Resume <Image id = "download-icon" src = {downloadIcon} alt = "Download Icon"></Image>
+                    Resume <img id = "download-icon" src = "../../download_icon.svg">
                 </a>
             </li>
         </ul>

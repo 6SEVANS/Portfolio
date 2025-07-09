@@ -1,17 +1,28 @@
 /* Controls the global styling of the portfolio. */
+
+@font-face {
+    font-family: 'Sixtyfour';
+    src: url('../../fonts/Sixtyfour[BLED\,SCAN].woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Optional: Improves performance */
+}
+
+
 html,body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    margin:0;
-    background-color: darkgrey;
-    scrollbar-gutter:stable;
+    background: url('../../website-background-clear.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .wrapper{
     display: flex;
     flex-direction: column;
     width:95%;
-    height: auto;
+    height:auto;
     margin:auto;
-    background-color:darkgrey;
 }
 /* #region Navbar-css */
     .navbar ul{
@@ -26,14 +37,16 @@ html,body{
     .navbar li{
         float:right;
         margin:10px;
+        font-family: 'Sixtyfour',sans-serif;
     }
     .navbar li a{
         text-decoration:none;
-        color:black;
+        color:#41FF00;
+        text-shadow: 2px 2px #282828;
         display: flex;
     }
     #download-icon{
-        max-height:1.2em;
+        max-height:1em;
         width:auto;
         margin-left:5px;
     }
@@ -51,10 +64,6 @@ html,body{
     }
     .navbar a:hover{
         color:red;
-        cursor: pointer;
-    }
-    #logo-item a:hover{
-        cursor: pointer;
     }
     #burger-menu{
         display:none;
@@ -90,10 +99,14 @@ html,body{
 /* #endregion */
 /* #region Index-page-css */
     #index-wrapper{
+        font-family: 'Sixtyfour', sans-serif;
         width: 100%;
         display: block;
-        text-align: center;
+        text-align: left;
         margin-top: 10%;
+        color:#41FF00;
+        text-shadow: 2px 2px #282828;
+        
     }
     .index-button{
         background-color: black;
@@ -163,6 +176,8 @@ html,body{
 /* #region Contact-page-css  */
     #email-header{
         text-align: center;
+        font-family: 'Sixtyfour',sans-serif;
+        color:#41FF00;
     }
     #email-form{
         display:grid;
@@ -211,7 +226,7 @@ html,body{
     }
 /* #endregion */
 /* #region Mobile-css */
-    @media screen and (max-width:439px){
+    @media screen and (max-width:520px){
         .navbar li {
             display:none;
         }
@@ -223,12 +238,12 @@ html,body{
             flex-direction:column;
             position:absolute;
             right:3.8em;
-            top: 1.55em;
+            top: 2em;
         }
         .burger-bar{
             height:4px;
             width:25px;
-            background-color:black;
+            background-color:#41FF00;
             border-radius:20px;
             transition: all 0.3s ease-in-out;
             position:absolute;
