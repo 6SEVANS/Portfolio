@@ -1,14 +1,11 @@
 /* Controls the global styling of the portfolio. */
-
 @font-face {
     font-family: 'Sixtyfour';
     src: url('../../fonts/Sixtyfour[BLED\,SCAN].woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-    font-display: swap; /* Optional: Improves performance */
+    font-display: swap;
 }
-
-
 html,body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background: url('../../website-background-clear.png') no-repeat center center fixed; 
@@ -47,6 +44,7 @@ html,body{
     }
     #download-icon{
         max-height:1em;
+        min-height:1em;
         width:auto;
         margin-left:5px;
     }
@@ -62,8 +60,11 @@ html,body{
         height:auto; 
         border-radius:100%;
     }
-    .navbar a:hover{
+    .navbar a:hover, .navbar a:focus{
         color:red;
+    }
+    .navbar li a:hover #download-icon path, .navbar li a:focus #download-icon path{
+        fill: #FF0000;
     }
     #burger-menu{
         display:none;
@@ -106,17 +107,44 @@ html,body{
         margin-top: 10%;
         color:#41FF00;
         text-shadow: 2px 2px #282828;
-        
+        margin-left:10px;
     }
     .index-button{
-        background-color: black;
         text-decoration: none;
-        text-align: center;
-        padding: 20px;
-        width: 6em;
-        display: inline-block;
-        color: white;
+        display: block;
+        color:#41FF00;
+        text-shadow: 2px 2px #282828;
+        width:7em;
+        margin-bottom:1em;
+        font-size: 20px;
     }
+    .blink{
+        display: none;
+        animation: blink 1s step-start 0s infinite;
+        -webkit-animation: blink 1s step-start 0s infinite;
+    }
+    .index-button:hover, .index-button:focus{
+        color:red;
+        width:8em;
+    }
+    .index-button:hover .blink, .index-button:focus .blink{
+        display: inline-block;
+    }
+
+
+    /* Animation for blinking. */
+    @keyframes blink{
+        50%{
+            opacity: 0.0;
+        }
+    }
+    @-webkit-keyframes blink{
+        50%{
+            opacity: 0.0;
+        }
+    }
+
+
 /* #endregion */
 /* #region Project-page-css */
     #projects-wrapper{
@@ -254,6 +282,7 @@ html,body{
         }
         #navbar-links.active li{
             display:block;
+            margin-bottom: 2.5em;
         }
         #body-wrapper.active{
             display:none;
@@ -278,7 +307,6 @@ html,body{
         #burger-menu.active .burger-bar:nth-child(3){
             transform: translateY(9px) rotate(-45deg);
         }
-
         #email-form{
             width:80%;
             grid-template-columns: 1fr;
