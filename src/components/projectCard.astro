@@ -12,8 +12,12 @@ const { imageLink, title, tags, description, demoLink, repoLink  } = Astro.props
         <p class = "project-description"> {description} </p>
 
         <div class = "project-buttons">
-            <a class = "demo-button" href = {demoLink} > Live Demo </a>
-            <a class = "repo-button" href = {repoLink} > Github </a>
+            <div class = "demo-container">
+                <a class = "demo-button" href = {demoLink} > &gt;Demo<span class = "blink">_</span></a>
+            </div>
+            <div class = "repo-container">
+                <a class = "repo-button" href = {repoLink} > &gt;Github<span class = "blink">_</span></a>
+            </div>
         </div>
     </div>
 </div>

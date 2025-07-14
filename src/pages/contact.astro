@@ -2,16 +2,27 @@
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 ---
-
 <script src = "../scripts/sendEmail.js"></script>
 <Layout>
     <h1 id = "email-header"> Get in touch! </h1>
     <form method = "POST" id = "email-form">
         <input type = "hidden" name = "access_key" value = "38a2d4b1-e088-40c8-b7af-7758ce8c1723">
-        <input type = "text" id = "name" name = "name" placeholder = "Full Name..." required>
-        <input type = "email" id = "email" name = "email" placeholder ="Email Address...    " required>
-        <textarea id = "message" name = "message" placeholder = "Your Message..." required></textarea>
-        <button id = "submit" type = "submit">Send</button>
+
+        <div id = "name-container">
+            <label for = "name">FULL NAME</label>
+            <input type = "text" id = "name" name = "name" required>
+        </div>
+        <div id = "email-container">
+            <label for = "email">EMAIL</label>
+            <input type = "email" id = "email" name = "email" required>
+        </div>
+        <div id = "message-container">
+            <label for = "message">MESSAGE</label>
+            <textarea id = "message" name = "message"></textarea>
+        </div>
+        <div id = "submit-container">
+            <button id = "submit" type = "submit">  &gt;SEND<span class = "blink">_</span></button>
+        </div>
         <div id = result></div>
     </form>
 </Layout>
