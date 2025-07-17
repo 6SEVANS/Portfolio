@@ -1,14 +1,11 @@
 /* Controls the global styling of the portfolio. */
-
 @font-face {
     font-family: 'Sixtyfour';
     src: url('../../fonts/Sixtyfour[BLED\,SCAN].woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-    font-display: swap; /* Optional: Improves performance */
+    font-display: swap;
 }
-
-
 html,body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background: url('../../website-background-clear.png') no-repeat center center fixed; 
@@ -47,6 +44,7 @@ html,body{
     }
     #download-icon{
         max-height:1em;
+        min-height:1em;
         width:auto;
         margin-left:5px;
     }
@@ -62,8 +60,15 @@ html,body{
         height:auto; 
         border-radius:100%;
     }
-    .navbar a:hover{
+    .navbar a:hover, .navbar a:focus, #logo:hover path, #logo path:focus{
         color:red;
+        stroke: #FF0000; 
+    }
+    #logo:hover #se, #logo path:focus #se{
+        fill: #FF0000;
+    }
+    .navbar li a:hover #download-icon path, .navbar li a:focus #download-icon path{
+        fill: #FF0000;
     }
     #burger-menu{
         display:none;
@@ -106,16 +111,39 @@ html,body{
         margin-top: 10%;
         color:#41FF00;
         text-shadow: 2px 2px #282828;
-        
+        margin-left:10px;
     }
     .index-button{
-        background-color: black;
         text-decoration: none;
-        text-align: center;
-        padding: 20px;
-        width: 6em;
+        display: block;
+        color:#41FF00;
+        text-shadow: 2px 2px #282828;
+        width:7em;
+        margin-bottom:1em;
+        font-size: 20px;
+    }
+    .blink{
+        display: none;
+        animation: blink 1s step-start 0s infinite;
+        -webkit-animation: blink 1s step-start 0s infinite;
+    }
+    .index-button:hover, .index-button:focus{
+        color:red;
+        width:8em;
+    }
+    .index-button:hover .blink, .index-button:focus .blink{
         display: inline-block;
-        color: white;
+    }
+    /* Animation for blinking. */
+    @keyframes blink{
+        50%{
+            opacity: 0.0;
+        }
+    }
+    @-webkit-keyframes blink{
+        50%{
+            opacity: 0.0;
+        }
     }
 /* #endregion */
 /* #region Project-page-css */
@@ -133,7 +161,9 @@ html,body{
         height:26em;
         overflow: hidden;
         padding:1em;
-        background-color: white;
+        background-color: #fbf5df;
+        border:3px solid black;
+        /* background-color: #5555aa; */
         border-radius: 1em;
     }
     .project-image{
@@ -143,35 +173,42 @@ html,body{
     }
     .project-title{
         margin:0;
+        font-size: 2rem;
     }
     .info-container{
         display: flex;
         flex-direction: column;
         height: 100%;
+        font-family: monospace;
     }
     .project-buttons{
         margin-top: auto;
         display: flex;
         gap:0.5em;
     }
-    .project-buttons a{
-        text-decoration: none;
-        color:white;
-        padding:1em;
-        border-radius: 0.8em;
+    .project-buttons a{       
+        width:auto;
         text-align: center;
-        width:100%;
+        text-decoration: none;
+        color:#41FF00;
+        text-shadow: 2px 2px #282828;
+        font-family: sixtyFour;
     }
-    .demo-button{
-        background-color: blue;
+    .demo-container{
+        width:70%;
+        text-align: center;
     }
-    .repo-button{
-        background-color: green;
+    .repo-container{
+        width: 100%;
+        text-align: center;
     }
-    .demo-button:hover, .repo-button:hover{
+    .demo-button:hover .blink, .repo-button:hover .blink, .demo-button:focus .blink, .repo-button:focus .blink{
+        display: inline-block;
+    }
+    .demo-button:hover, .repo-button:hover, .demo-button:focus, .repo-button:focus{
         cursor: pointer;
+        color: #FF0000;
     }
-
 /* #endregion */
 /* #region Contact-page-css  */
     #email-header{
@@ -182,7 +219,7 @@ html,body{
     #email-form{
         display:grid;
         grid-template-columns: 1fr 1fr; 
-        grid-template-rows: 1fr 5fr 1fr;
+        grid-template-rows: 1fr 3fr 1fr;
         grid-template-areas: 
             'name email'
             'message message'
@@ -191,6 +228,7 @@ html,body{
         width: 70%;
         margin: auto;
         padding:0;
+        margin-top:3em;
     }
     #email-form input, #email-form textarea{
         width:100%;
@@ -199,30 +237,52 @@ html,body{
         box-sizing: border-box;
         resize: none;
         border-radius: 0.5em;
-        border: 1px solid silver;
+        border: 1px solid black;
+        font-family: monospace;
     }
-    #email-form #name{
-        grid-area: name;
+    #email-form #name-container{
+        grid-area:name;
     }
-    #email-form #email{
-        grid-area: email;
+    label{
+        color:#41FF00;
+        font-family: sixtyFour;
+        text-shadow: 2px 2px #282828;   
+        position:relative;
+        top:0.4em;
+        left:0.3em;
     }
-    #email-form #message{
-        grid-area: message;
+    #email-form #email-container{
+        grid-area:email;
+    }
+    #email-form #message-container{
+        grid-area:message;
         font-size: 1rem;
         width: 100%;
     }
-    #email-form #submit{
-        grid-area:submit;
-        width:35%;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        font-size: 1rem;
-        border-radius: 0.5em;
-        border:1px solid silver;
+    #message{
+        height: 100%;
     }
-    #email-form #submit:hover{
+    #email-form #submit-container{
+        grid-area: submit;
+        text-align: center;
+        margin:auto;
+    }
+    #email-form #submit{
+        font-size: 1rem;
+        color:#41FF00;
+        font-family: sixtyFour;
+        text-shadow: 2px 2px #282828;
+        background-color: transparent;
+        border:none;
+        margin-top: 1.5em;
+    }
+    #email-form #submit:hover, #email-form #submit:focus{
         cursor: pointer;
+        color:#FF0000;
+    }
+    #submit:hover .blink, #submit:focus .blink{
+        display: inline-block;
+        text-align: none;
     }
 /* #endregion */
 /* #region Mobile-css */
@@ -254,6 +314,7 @@ html,body{
         }
         #navbar-links.active li{
             display:block;
+            margin-bottom: 2.5em;
         }
         #body-wrapper.active{
             display:none;
@@ -278,7 +339,6 @@ html,body{
         #burger-menu.active .burger-bar:nth-child(3){
             transform: translateY(9px) rotate(-45deg);
         }
-
         #email-form{
             width:80%;
             grid-template-columns: 1fr;
@@ -288,6 +348,9 @@ html,body{
             'email'
             'message'
             'submit';
+        }
+        #email-form #submit-container{
+            text-align: center;
         }
         #email-form input, #email-form textarea{
             resize: vertical;
