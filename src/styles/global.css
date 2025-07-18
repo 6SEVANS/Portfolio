@@ -284,6 +284,15 @@ html,body{
         display: inline-block;
         text-align: none;
     }
+    #result-wrapper{
+        margin:auto;
+        text-align: center;
+        width:70%; 
+    }
+    #result{
+        color:#41FF00;
+        font-family: sixtyFour;
+    }
 /* #endregion */
 /* #region Mobile-css */
     @media screen and (max-width:520px){
