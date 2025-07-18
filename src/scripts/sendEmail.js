@@ -9,6 +9,7 @@ emailForm.addEventListener('submit', function(e){
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
+    result.style.display = "block";
     result.innerHTML = "Please wait...";
 
     fetch('https://api.web3forms.com/submit', {
