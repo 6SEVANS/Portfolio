@@ -105,22 +105,25 @@ html,body{
 /* #region Index-page-css */
     #index-wrapper{
         font-family: 'Sixtyfour', sans-serif;
-        width: 100%;
-        display: block;
-        text-align: left;
-        margin-top: 10%;
+        width:100%;
+        display:block;
+        text-align:left;
+        margin-top:10%;
         color:#41FF00;
         text-shadow: 2px 2px #282828;
         margin-left:10px;
     }
+    h1,h2{
+        font-weight:normal;
+    }
     .index-button{
-        text-decoration: none;
-        display: block;
+        text-decoration:none;
+        display:block;
         color:#41FF00;
-        text-shadow: 2px 2px #282828;
+        text-shadow:2px 2px #282828;
         width:7em;
         margin-bottom:1em;
-        font-size: 20px;
+        font-size:20px;
     }
     .blink{
         display: none;
@@ -161,10 +164,9 @@ html,body{
         height:26em;
         overflow: hidden;
         padding:1em;
-        background-color: #fbf5df;
-        border:3px solid black;
-        /* background-color: #5555aa; */
+        background-color: #0C0C0C;
         border-radius: 1em;
+        color:white;
     }
     .project-image{
         object-fit: cover;
